@@ -14,3 +14,7 @@ Run `npm run dev` for a dev server. Navigate to `http://127.0.0.1:5173/`. The ap
 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Deployment
+
+Run `npm run deploy` to deploy the project on the github pages, and it can be visited using this url [Github repositoris explorer url](https://bangkitwira16.github.io/GitHub-repositories-explorer/)
+
