@@ -21,7 +21,6 @@ const searchContainer = () => {
       const response = await getUsers(text);
       if (response) dispatch({ type: "success", results: response.items });
     } catch (err: any) {
-      console.log(err);
       dispatch({ type: "failure", error: err || "" });
     }
   };
