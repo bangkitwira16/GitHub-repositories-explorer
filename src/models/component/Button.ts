@@ -5,6 +5,6 @@ export interface IButton extends Partial<ButtonProps> {
   disabled: boolean;
   isLoading: boolean;
   text: string;
-  click: MouseEventHandler;
+  click?: MouseEventHandler;
   className: string;
 }

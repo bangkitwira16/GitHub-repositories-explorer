@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { ChangeEvent } from "react";
 import Button from "./Button";
 import Input from "./Input";
@@ -10,7 +10,8 @@ const searchContainer = () => {
   const [text, setText] = useState("");
   const [isInputError, setIsInputError] = useState(false);
 
-  const onClick = async () => {
+  const onClick = async (e: FormEvent) => {
+    e.preventDefault()
     if (text === "") {
       setIsInputError(true);
       return;
@@ -30,7 +31,7 @@ const searchContainer = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-2 mb-12">
+    <form onSubmit={onClick} className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-2 mb-12">
       <div className="flex-grow w-full">
         <Input
           type="text"
@@ -50,9 +51,9 @@ const searchContainer = () => {
         disabled={state.isLoading}
         variant="contained"
         isLoading={state.isLoading}
-        click={onClick}
+        type="submit"
       />
-    </div>
+    </form>
   );
 };
 
