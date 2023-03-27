@@ -57,7 +57,6 @@ const searchContainer = () => {
         variant="contained"
         isLoading={state.isLoading}
         type="submit"
-        onClick={submitForm}
       />
     </form>
   );
