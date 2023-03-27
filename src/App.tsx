@@ -35,7 +35,7 @@ function App() {
   // initialize loading and empty state  
   const reposSkeleton = isLoading ? <Skeleton height={64} /> : null;
   const userSkeleton = state.isLoading ? <Skeleton height={48} /> : null;
-  const noReposData = !repos?.length ? "No Data" : null;
+  const noReposData = !repos?.length && !isLoading ? "No Data" : null;
 
   return (
     <div className="App max-w-4xl mx-auto">
