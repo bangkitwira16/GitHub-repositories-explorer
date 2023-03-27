@@ -12,6 +12,7 @@ const Skeleton = (props: ISkeleton) => {
         .fill(null)
         .map((val, index) => (
           <SkeletonComponent
+            key={index}
             variant="rectangular"
             className="w-full mb-2"
             height={props.height}
