@@ -13,6 +13,7 @@ const Button = (props: IButton) => {
       disabled={props.disabled}
       className={props.className}
       onClick={props.click}
+      type={props.type}
     >
       {props.text} {loading}
     </ButtonComponent>
